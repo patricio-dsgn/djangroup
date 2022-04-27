@@ -15,7 +15,7 @@ bin-release/
 
 **/.DS_Store
 .DS_Store
-
+/.vscode
 /__pycache__
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
