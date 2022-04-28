@@ -15,8 +15,8 @@ def about(request):
 def products(request):
     return render(request,'store/products.html')
 
-def gallery(request):
-    return render(request,'store/gallery.html')
+def services(request):
+    return render(request,'store/services.html')
 
 def contact(request):
     return render(request,'store/contact.html')

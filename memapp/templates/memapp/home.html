@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memapp</title>
+    <link rel="stylesheet" href="{% static '/memapp/css/style.css' %}">
+</head>
+<body>
+    <div id="my-animation">
+        <h1>
+            <img src="{% static '/memapp/img/cat.gif' %}" alt="My image">
+            <span>Memapp</span>
+        </h1>
+    </div>
+    
+ 
+
+<script>
+    
+const animations = [
+    'https://www.idd.cl/p/sourtest/gif_animated/0d59d182777a4096f1e44777414ead1d.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/3zwQ.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/5d088a3ede0f408b9e6047a19094d3aa.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/9Gha.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/53c6d53c0a420d130ea23d645533c934.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/72dd4068f6fbde6814c9f72d010df8fd.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/51287fcf4fdc872086667bbaa8574b39.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/a29991ceb05921747ff0635636ce3cbc.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/AccurateAnnualCoyote-max-1mb.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/afa25ef35033f940f8656b18273df47f.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/AZoc.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/b872d9e2336333545a7f80751714272f.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/cartoon-excited.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/cat-yay.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/dance.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/dbakow8-844d413a-4af0-4806-a74a-d1aae46ef537.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/foodporn.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/giphy.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/image_processing20210118-3367-1r9vb84.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/kitten-sword.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/list.txt',
+    'https://www.idd.cl/p/sourtest/gif_animated/MagnificentMiserlyBull-size_restricted.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/pumpum-cloud-full-1000.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/pumpum-crying.gif',
+    'https://www.idd.cl/p/sourtest/gif_animated/Rafael-Varona-gif.webp',
+    'https://www.idd.cl/p/sourtest/gif_animated/tumblr_inline_mjx5ioXh8l1qz4rgp.gif',
+];
+
+
+const random = Math.floor(Math.random() * animations.length);
+const pick = animations[random];
+const myAnimation = document.getElementById("my-animation");
+myAnimation.style.backgroundImage = "url('" + pick + "')";
+
+</script>
+
+
+</body>
+</html>
