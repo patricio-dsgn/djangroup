@@ -1,12 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>About</h1>   
-</body>
-</html>
+{% extends 'base-store.html' %}
+{% comment %} {% load static %} {% endcomment %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>About</h1>
+            <p>Developed and proposed for the first time in
+                England by Stephen Lewis and Ken Heaton at
+                the University Department of Medicine,
+                Bristol Royal Infirmary, it was suggested by
+                the authors as a clinical assessment tool in
+                1997 in the Scandinavian Journal of Gastroenterology
+                after a previous prospective study, conducted in
+                on a sample of the population (838 men and 1,059 women),
+                had shown an unexpected prevalence of defecation disorders
+                related to the shape and type of stool. The authors of
+                the former paper concluded that the form of the stool
+                is a useful surrogate measure of colon transit time.
+                That conclusion has since been challenged as having limited
+                validity for Types 1 and 2; however, it remains in use
+                as a research tool to evaluate the effectiveness of
+                treatments for various diseases of the bowel, as well as
+                a clinical communication aid.</p>
+
+                <h2>Versions</h2>
+                <p>The same scale has been validated in Spanish,
+                    Brazilian Portuguese, and Polish versions.
+                    A version has also been designed and validated
+                    for children. More recently, in September 2011,
+                    a modified version of the scale was validated using
+                    a criterion of self-assessment for ages 6–8 years
+                    of age.</p>
+                <p>A version of the scale was developed into a chart
+                    suitable for use on US television by Gary Kahan of
+                    NewYork–Presbyterian Hospital.</p>  
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

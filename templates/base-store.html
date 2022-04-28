@@ -11,22 +11,43 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  
     
 </head>
 <body class="grey lighten-3">
+
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li {% if nbar == 'home' %} class="active" {% endif %}><a href="./">home</a></li>
+          <li {% if nbar == 'about' %} class="active" {% endif %}><a href="./about">about</a></li>
+          <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">products</a></li>
+          <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">services</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li {% if nbar == 'home' %} class="active" {% endif %}><a href="./">home</a></li>
+    <li {% if nbar == 'about' %} class="active" {% endif %}><a href="./about">about</a></li>
+    <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">products</a></li>
+    <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">services</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">contact</a></li>
+  </ul>
+
   <header class="red darken-2">
     <div class="container">
       <div class="row">
         <div class="col">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-          <ul>
-            <li><a href="#"></a>one</li>
-            <li><a href="#"></a>two</li>
-            <li><a href="#"></a>three</li>
-            <li><a href="#"></a>four</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -43,10 +64,11 @@
         <div class="col">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
           <ul>
-            <li><a href="#"></a>one</li>
-            <li><a href="#"></a>two</li>
-            <li><a href="#"></a>three</li>
-            <li><a href="#"></a>four</li>
+            <li class="active"><a href=""></a>home</li>
+            <li><a href="./about"></a>about</li>
+            <li><a href="./products"></a>products</li>
+            <li><a href="./services"></a>services</li>
+            <li><a href="./contact"></a>contact</li>
           </ul>
         </div>
       </div>
@@ -54,22 +76,14 @@
   </footer>  
 
 
-
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-
-  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-  // var collapsibleElem = document.querySelector('.collapsible');
-  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
-  // Or with jQuery
-
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
+    var instances = M.Sidenav.init(elems);
   });
 </script>
+
 </body>
 </html>
