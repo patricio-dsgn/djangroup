@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Field 1</th>
+        ...
+        <th>Field N</th>
+    </tr>
+    {% for item in query_results__ %}
+    <tr> 
+        <td>{{ item.fname }}</td>
+        <td>{{ item.lname }}</td>
+    </tr>
+    {% endfor %}
+</table>
+

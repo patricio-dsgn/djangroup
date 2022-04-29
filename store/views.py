@@ -1,4 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+
+
+# Create your views here.
+
+
+# def show(request):
+#     clients = Client.objects.all()
+#     return render(request,"show.html",{'client':clients})
+
+from store.models import Client
+def show(request):
+    query_results = Client.objects.all()
+    return render(request,"store/show.html",{'query_results__':query_results})
+    #return a response to your template and add query_results to the context
+
 
 # Create your views here.
 
@@ -20,3 +35,4 @@ def services(request):
 
 def contact(request):
     return render(request,'store/contact.html',{'nbar':'contact'})
+
