@@ -7,23 +7,31 @@
 <div class="container">
 
     <div class="row">
-        <div class="col s12 yellow darken-3">
+        
+        <div class="col s12">
             <h1>Clients</h1>
-            <table>
-                <tr>
-                    <th>Field 1</th>
-                    ...
-                    <th>Field N</th>
-                </tr>
-                {% for item in query_results %}
-                <tr> 
-                    <td>{{ item.fname }}</td>
-                    <td>{{ item.lname }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-            
-            
+            <table class="grey-text text-darken-2 teal accent-3 card responsive-table centered highlight">
+                <thead>
+                    <tr>
+                        <th>Run</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <body>
+                    {% for item in query_results %}
+                    <tr> 
+                        <td>{{ item.run }}</td>
+                        <td>{{ item.fname }}</td>
+                        <td>{{ item.lname }}</td>
+                        <td>{{ item.phone }}</td>
+                        <td>{{ item.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </body>
+            </table>    
         </div>
     </div>
 </div>
