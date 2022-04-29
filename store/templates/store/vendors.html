@@ -1,0 +1,90 @@
+{% extends 'store/base-store.html' %}
+{% load static %}
+
+{% block title %}Vendors{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h1>Vendors</h1>
+            <div class="col s8 card teal lighten-3">
+                <table class="card-content  highlight centered">   
+                    <thead>
+                        <tr>
+                            <th>Run</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <body>
+                        {% for item in query_vendors %}
+                        <tr> 
+                            <td>{{ item.run }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.phone }}</td>
+                            <td>{{ item.email }}</td>
+                        </tr>
+                        {% endfor %}
+                    </body>
+                </table>
+            </div>
+
+            <div class="col s5 card yellow darken-2">
+                
+                <ol>
+                    <h4>Notas importantes</h4>
+                    <li>Lorem, ipsum dolor sit amet consectetur </li>
+                    <li>adipisicing elit. Quia enim nihil</li>
+                    <li>eligendi velit, ipsam, alias dignissimos dicta</li>
+                    <li>animi repellat quis voluptatem minima vel</li>
+                    <li>tempore libero sint adipisci doloribus</li>
+                    <li>pariatur aut!</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% comment %} {% extends 'store/base-store.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        
+        <div class="col s12">
+            <h1>Vendors</h1>
+            <table class="grey-text text-darken-2 teal accent-3 card responsive-table centered highlight">
+                <thead>
+                    <tr>
+                        <th>Run</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <body>
+                    {% for item in query_results %}
+                    <tr> 
+                        <td>{{ item.run }}</td>
+                        <td>{{ item.fname }}</td>
+                        <td>{{ item.lname }}</td>
+                        <td>{{ item.phone }}</td>
+                        <td>{{ item.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </body>
+            </table>    
+        </div>
+    </div>
+</div>
+
+{% endblock %} {% endcomment %}

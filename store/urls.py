@@ -21,4 +21,6 @@ urlpatterns = [
     path('services', views.services),
     path('contact', views.contact),
     path('clients',views.show),
+    path('vendors',views.vendors),
+    path('sign-in-vendors',views.sign_in_vendors),
 ]

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} Hello World {% endblock title %}</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  
+    <style>
+      .logo-me{ height: 2.6rem; margin-top:1rem }
+    </style>
+</head>
+<body class="grey lighten-3">
+
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">
+          <img class="logo-me" src="{% static '/store/img/logo-white.png' %}" alt="My image">
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li {% if nbar == 'home' %} class="active" {% endif %}><a href="./">Home</a></li>
+          <li {% if nbar == 'about' %} class="active" {% endif %}><a href="./about">About Us</a></li>
+          <li {% if nbar == 'clients' %} class="active" {% endif %}><a href="./clients">Clients</a></li>
+          <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">Products</a></li>
+          <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">Services</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors">Vendors</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./sign-in-vendors">Sign In Vendors</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li {% if nbar == 'home' %} class="active" {% endif %}><a href="./">Home</a></li>
+    <li {% if nbar == 'about' %} class="active" {% endif %}><a href="./about">About Us</a></li>
+    <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">Products</a></li>
+    <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">Services</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors">Vendors</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./sign-in-vendors">Sign In Vendors</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">Contact</a></li>
+  </ul>
+
+
+
+  {% block content %}contenido{% endblock content %}
+
+
+
+  <footer class="purple darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+</script>
+
+</body>
+</html>

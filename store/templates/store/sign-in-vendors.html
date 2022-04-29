@@ -1,16 +1,27 @@
 {% extends 'store/base-store.html' %}
 {% load static %}
 
-{% block title %}Services{% endblock title %}
+{% block title %}Sign In Vendors{% endblock title %}
 
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1>Services</h1>
-            <img class="col s6 right" src="{% static '/store/img/serv.gif' %}" alt="My image">
-            
+            <h1>Sign In Vendors</h1>
+        
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+
+
             <ul>
+                <li>Lorem, ipsum dolor sit amet consectetur </li>
+                <li>adipisicing elit.</li>
+                <li>Quia enim nihil</li>
+                <li>Lorem, ipsum dolor sit amet consectetur </li>
+                <li>adipisicing elit.</li>
+                <li>Quia enim nihil</li>
                 <li>Lorem, ipsum dolor sit amet consectetur </li>
                 <li>adipisicing elit.</li>
                 <li>Quia enim nihil</li>
