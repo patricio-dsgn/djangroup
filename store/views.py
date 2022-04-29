@@ -11,7 +11,7 @@ from django.shortcuts import render,redirect
 from store.models import Client
 def show(request):
     query_results = Client.objects.all()
-    return render(request,"store/show.html",{'query_results__':query_results})
+    return render(request,"store/clients.html",{'nbar':'clients', 'query_results':query_results})
     #return a response to your template and add query_results to the context
 
 

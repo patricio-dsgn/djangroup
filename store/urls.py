@@ -20,5 +20,5 @@ urlpatterns = [
     path('products', views.products),
     path('services', views.services),
     path('contact', views.contact),
-    path('show',views.show),
+    path('clients',views.show),
 ]

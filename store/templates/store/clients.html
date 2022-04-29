@@ -1,0 +1,31 @@
+{% extends 'base-store.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col s12 yellow darken-3">
+            <h1>Clients</h1>
+            <table>
+                <tr>
+                    <th>Field 1</th>
+                    ...
+                    <th>Field N</th>
+                </tr>
+                {% for item in query_results %}
+                <tr> 
+                    <td>{{ item.fname }}</td>
+                    <td>{{ item.lname }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
