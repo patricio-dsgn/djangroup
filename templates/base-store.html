@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +15,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   
-    
+    <style>
+      .logo-me{ height: 2.6rem; margin-top:1rem }
+    </style>
 </head>
 <body class="grey lighten-3">
 
   <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#!" class="brand-logo">
+          <img class="logo-me" src="{% static '/store/img/logo-white.png' %}" alt="My image">
+        </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
@@ -43,15 +48,6 @@
     <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">contact</a></li>
   </ul>
 
-  <header class="red darken-2">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-        </div>
-      </div>
-    </div>
-  </header>
 
 
   {% block content %}contenido{% endblock content %}

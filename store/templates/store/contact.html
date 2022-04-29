@@ -1,13 +1,13 @@
 {% extends 'base-store.html' %}
 {% load static %}
-{% comment %} {% load static %} {% endcomment %}
 
 {% block title %}Contact{% endblock title %}
 
 {% block content %}
 <div class="container">
+
     <div class="row">
-        <div class="col s4 red">
+        <div class="col s4 purple darken-3">
             <h1>Contact</h1>
             <img class="responsive-img" src="{% static '/store/img/mushroom.gif' %}" alt="My image">
             <p>Developed and proposed for the first time in
@@ -19,8 +19,16 @@
                 after a
             </p>
         </div>
-        <div class="col s8 blue">
-                 revious prospective study, conducted in
+        <div class="col s8 green lighten-3">
+            <form action="">
+                <input name="name" id="name" type="text">
+                <input name="email" id="email" type="text">
+                <textarea name="message" id="message" cols="30" height="130px">
+                </textarea>
+                <button class="btn green" type="submit" value="Send">Send</button>
+
+            </form>
+                <p>Revious prospective study, conducted in
                 on a sample of the population (838 men and 1,059 women),
                 had shown an unexpected prevalence of defecation disorders
                 related to the shape and type of stool. The authors of
@@ -32,17 +40,17 @@
                 treatments for various diseases of the bowel, as well as
                 a clinical communication aid.</p>
 
-                <h2>Versions</h2>
+        
                 <p>The same scale has been validated in Spanish,
                     Brazilian Portuguese, and Polish versions.
                     A version has also been designed and validated
                     for children. More recently, in September 2011,
                     a modified version of the scale was validated using
-                    a criterion of self-assessment for ages 6–8 years
+                    a criterion of self-assessment for ages 6 or 8 years
                     of age.</p>
                 <p>A version of the scale was developed into a chart
                     suitable for use on US television by Gary Kahan of
-                    NewYork–Presbyterian Hospital.</p>  
+                    NewYork or Presbyterian Hospital.</p>  
 
         </div>
     </div>
