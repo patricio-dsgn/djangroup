@@ -1,52 +1,31 @@
 from django.shortcuts import render,redirect
 from store.models import Vendor
 from store.models import Client
-
-from .forms import PostForm, VendorForm
-
-# def sign_in_vendors(request):
-#     return render(request,'store/sign-in-vendors.html',{'nbar':'sign-in-vendors'})
+from store.models import Post
 
 
-def sign_in_vendors(request):
-    if request.method == "POST":
-        form = VendorForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            # post.published_date = timezone.now()
-            post.save()
-            return redirect('vendors', pk=post.pk)
-    else:
-        form = VendorForm()
-    return render(request, 'store/sign-in-vendors.html', {'form': form})
+from .forms import PostForm
+from .forms import VendorForm
+from django.utils import timezone
 
-# Create your views here.
-# def show(request):
-#     clients = Client.objects.all()
-#     return render(request,"show.html",{'client':clients})
-
-
-
-def vendor_new(request):
+# def post_new(request):
+#     form = PostForm()
+#     return render(request, 'store/post_edit.html', {'form': form})
+def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            # post.published_date = timezone.now()
+            post.published_date = timezone.now()
             post.save()
-            return redirect('vendors', pk=post.pk)
+            return redirect('/post_list', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'store/register_vendor.html', {'form': form})
+    return render(request, 'store/post_create.html', {'form': form})
 
-# def post(request):
-#     return render(request,'store/post.html',{'nbar':'post'})
-
-
-# Create your views here.
-
+    
+# Create hello world
 # from django.http import HttpResponse
 # def homePageView(request):
 #     return HttpResponse("Hello, World!")
@@ -66,25 +45,33 @@ def services(request):
 def contact(request):
     return render(request,'store/contact.html',{'nbar':'contact'})
 
-
-def contact(request):
-    return render(request,'store/contact.html',{'nbar':'contact'})
-
-def contact(request):
-    return render(request,'store/contact.html',{'nbar':'contact'})
-
-
-
-
-
-
 def show(request):
     query_results = Client.objects.all()
     return render(request,"store/clients.html",{'nbar':'clients', 'query_results':query_results})
     #return a response to your template and add query_results to the context
 
+
+
+
+
+def post_edit(request):
+    return render(request,'store/post_edit.html',{'nbar':'post_edit'})
+
+def post_all(request):
+    query_post = Post.objects.all().order_by('-published_date')
+    return render(request,'store/post_list.html',{'nbar':'post_list','query_post':query_post})
+
 def vendors(request):
     query_vendors = Vendor.objects.all()
     return render(request,'store/vendors.html',{'nbar':'vendors', 'query_vendors':query_vendors})
+
+def sign_in_vendors(request):
+    return render(request,'store/sign-in-vendors.html',{'nbar':'sign-in-vendors'})
+
+
+
+# def vendors(request):
+#     query_vendors = Vendor.objects.all()
+#     return render(request,'store/vendors.html',{'nbar':'vendors', 'query_vendors':query_vendors})
 
 

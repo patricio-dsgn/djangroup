@@ -4,27 +4,39 @@
 {% block title %}Products{% endblock title %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1>Products</h1>
-            <p>Developed and proposed for the first time in
-                England by Stephen Lewis and Ken Heaton at
-                the University Department of Medicine,
-                Bristol Royal Infirmary, it was suggested by
-                the authors as</p>
-                <img class="col s5" src="{% static '/store/img/prod.gif' %}" alt="My image">
-                <ol>
-                    <li>Lorem, ipsum dolor sit amet consectetur </li>
-                    <li>adipisicing elit. Quia enim nihil</li>
-                    <li>eligendi velit, ipsam, alias dignissimos dicta</li>
-                    <li>animi repellat quis voluptatem minima vel</li>
-                    <li>tempore libero sint adipisci doloribus</li>
-                    <li>pariatur aut!</li>
-                </ol>
 
-        </div>
-    </div>
-</div>
+            <div class="parallax-container">
+                <div class="parallax"><img src="{% static '/store/img/bg1.jpg' %}"></div>
+              </div>
+              <div class="section white">
+                <div class="row container">                    
+                    <div class="col s12">
+                        <h1>Products</h1>
+                        <p>Developed and proposed for the first time in
+                            England by Stephen Lewis and Ken Heaton at
+                            the University Department of Medicine,
+                            Bristol Royal Infirmary, it was suggested by
+                            the authors as</p>
+                    </div>
+
+                    <img class="col s12 m5" src="{% static '/store/img/prod.gif' %}" alt="My image">
+                    <ol class="col s12 m7">
+                        <li>Lorem, ipsum dolor sit amet consectetur </li>
+                        <li>adipisicing elit. Quia enim nihil</li>
+                        <li>eligendi velit, ipsam, alias dignissimos dicta</li>
+                        <li>animi repellat quis voluptatem minima vel</li>
+                        <li>tempore libero sint adipisci doloribus</li>
+                        <li>pariatur aut!</li>
+                    </ol>
+        
+                    
+                </div>
+              </div>
+              <div class="parallax-container">
+                <div class="parallax"><img src="{% static '/store/img/bg2.jpg' %}"></div>
+              </div>
+            </div>
+
+        
 
 {% endblock %}
