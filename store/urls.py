@@ -19,13 +19,13 @@ urlpatterns = [
     path('products', views.products),
     path('services', views.services),
     path('contact', views.contact),
-    path('clients',views.show),
+    path('clients',views.clients),
     
     path('post_create',views.post_new),
     path('post_list',views.post_all),
 
-    path('vendors',views.vendors),
-    path('sign-in-vendors',views.sign_in_vendors),
+    path('vendors',views.vendor_all),
+    path('vendors_create',views.vendor_new),
 
     # path('sign-in-vendors',views.sign_in_vendors),
 ]

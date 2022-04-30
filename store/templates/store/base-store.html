@@ -36,7 +36,7 @@
           <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">Products</a></li>
           <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">Services</a></li>
           <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors">Vendors</a></li>
-          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./sign-in-vendors">Sign In Vendors</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors_create">Vendors create</a></li>
           <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">Contact</a></li>
         </ul>
       </div>
@@ -49,7 +49,7 @@
     <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">Products</a></li>
     <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">Services</a></li>
     <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors">Vendors</a></li>
-    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./sign-in-vendors">Sign In Vendors</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors_create">Vendors create</a></li>
     <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">Contact</a></li>
   </ul>
 
@@ -101,6 +101,15 @@
 
     var elems = document.querySelectorAll('.slider');
     var instances = M.Slider.init(elems);
+
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
 
   });
 </script>

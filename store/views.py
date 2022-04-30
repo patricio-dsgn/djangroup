@@ -24,6 +24,27 @@ def post_new(request):
         form = PostForm()
     return render(request, 'store/post_create.html', {'form': form})
 
+def post_all(request):
+    query_post = Post.objects.all().order_by('-published_date')
+    return render(request,'store/post_list.html',{'nbar':'post_list','query_post':query_post})
+
+def vendor_new(request):
+    if request.method == "POST":
+        form = VendorForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('/vendors', pk=post.pk)
+    else:
+        form = VendorForm()
+    return render(request, 'store/vendors_new.html', {'form': form})
+
+def vendor_all(request):
+    query_vendors = Vendor.objects.all().order_by('name')
+    return render(request,'store/vendors.html',{'nbar':'vendors','query_vendors':query_vendors})
+
     
 # Create hello world
 # from django.http import HttpResponse
@@ -45,7 +66,7 @@ def services(request):
 def contact(request):
     return render(request,'store/contact.html',{'nbar':'contact'})
 
-def show(request):
+def clients(request):
     query_results = Client.objects.all()
     return render(request,"store/clients.html",{'nbar':'clients', 'query_results':query_results})
     #return a response to your template and add query_results to the context
@@ -54,19 +75,6 @@ def show(request):
 
 
 
-def post_edit(request):
-    return render(request,'store/post_edit.html',{'nbar':'post_edit'})
-
-def post_all(request):
-    query_post = Post.objects.all().order_by('-published_date')
-    return render(request,'store/post_list.html',{'nbar':'post_list','query_post':query_post})
-
-def vendors(request):
-    query_vendors = Vendor.objects.all()
-    return render(request,'store/vendors.html',{'nbar':'vendors', 'query_vendors':query_vendors})
-
-def sign_in_vendors(request):
-    return render(request,'store/sign-in-vendors.html',{'nbar':'sign-in-vendors'})
 
 
 
