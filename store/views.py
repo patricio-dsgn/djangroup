@@ -73,6 +73,12 @@ def clients(request):
 
 
 
+def login(request):
+    return render(request,'store/login.html',{'nbar':'login'})
+
+def register(request):
+    return render(request,'store/register.html',{'nbar':'register'})
+
 
 
 

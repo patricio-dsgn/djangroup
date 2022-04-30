@@ -27,5 +27,8 @@ urlpatterns = [
     path('vendors',views.vendor_all),
     path('vendors_create',views.vendor_new),
 
+    path('login',views.login),
+    path('register',views.register),
+
     # path('sign-in-vendors',views.sign_in_vendors),
 ]

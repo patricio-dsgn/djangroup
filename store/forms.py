@@ -12,3 +12,5 @@ class VendorForm(forms.ModelForm):
     class Meta:
         model = Vendor
         fields = ('run', 'name', 'phone', 'email')
+
+

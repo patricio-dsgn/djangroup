@@ -1,6 +1,28 @@
 
 
 
+.bar_log{
+    position: relative;
+    height: 20px;
+    z-index: 2000;
+}
+
+.bar_log div{
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    background: rgb(71, 15, 120);
+    margin-bottom: 30px;
+}
+
+.bar_log div a{
+    color: #0ff;
+    margin-right: 30px;
+}
+
+.bar_log div a:hover{
+    filter: hue-rotate(80deg);
+}
 
 
 
