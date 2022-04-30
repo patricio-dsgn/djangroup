@@ -7,23 +7,34 @@
 <div class="container">
 
     <div class="row">
-        <div class="col s12 yellow darken-3">
+        <div>
             <h1>Clients</h1>
-            <table>
-                <tr>
-                    <th>Field 1</th>
-                    ...
-                    <th>Field N</th>
-                </tr>
-                {% for item in query_results %}
-                <tr> 
-                    <td>{{ item.fname }}</td>
-                    <td>{{ item.lname }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-            
-            
+            <div class="card blue lighten-5">
+                <table>
+                    {% for item in query_results %}
+                    <tr> 
+                        <td>{{ item.fname }} {{ item.lname }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <p>Developed and proposed for the first time in
+                England by Stephen Lewis and Ken Heaton at
+                the University Department of Medicine,
+                Bristol Royal Infirmary, it was suggested by
+                the authors as a clinical assessment tool in
+                1997 in the Scandinavian Journal of Gastroenterology
+                after a previous prospective study, conducted in
+                on a sample of the population (838 men and 1,059 women),
+                had shown an unexpected prevalence of defecation disorders
+                related to the shape and type of stool. The authors of
+                the former paper concluded that the form of the stool
+                is a useful surrogate measure of colon transit time.
+                That conclusion has since been challenged as having limited
+                validity for Types 1 and 2; however, it remains in use
+                as a research tool to evaluate the effectiveness of
+                treatments for various diseases of the bowel, as well as
+                a clinical communication aid.</p>
         </div>
     </div>
 </div>
