@@ -25,4 +25,8 @@ urlpatterns = [
     # path("", include("store.urls")),  # new
     path('', include('store.urls')),
     path('memapp/', include('memapp.urls')),
+    
+    path('members/', include('django.contrib.auth.urls')),
+    path('members/', include('members.urls')),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

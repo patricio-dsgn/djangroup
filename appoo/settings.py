@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # "store.apps.StoreConfig",  # new
     'store',
     'memapp',
+    'members',
 ]
 
 MIDDLEWARE = [

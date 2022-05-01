@@ -7,7 +7,7 @@
     z-index: 2000;
 }
 
-.bar_log div{
+.bar_log .log{
     position: fixed;
     width: 100%;
     text-align: right;
@@ -15,15 +15,21 @@
     margin-bottom: 30px;
 }
 
-.bar_log div a{
+.bar_log .log a{
     color: #0ff;
     margin-right: 30px;
 }
 
-.bar_log div a:hover{
+.bar_log .log a:hover{
     filter: hue-rotate(80deg);
 }
 
+.who{
+    position: fixed;
+    color: #36dc83;
+    z-index: 2000;
+    margin-left: 10px;
+}
 
 
 

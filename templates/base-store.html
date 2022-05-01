@@ -24,45 +24,66 @@
 </head>
 <body class="grey lighten-3">
 
-
     <div class="bar_log">
-      <div>
-        <a href="register">register</a>
-        <a href="login">login</a>
+
+      <div class="who">
+      {% if messages %}
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+      {% endif %}
+        
       </div>
+
+      {% if user.is_authenticated %}
+      <div class="who">
+        Oli oli {{user.first_name}} {{user.last_name}} !
+      </div>
+      <div class="log">
+        <a href="{% url 'logout' %}">logout</a>
+      </div>
+
+      {% else %}
+
+      <div class="log">
+        <a href="#">register</a>
+        <a href="{% url 'login' %}">login</a>
+      </div>
+        
+        {% endif %}
     </div>
 
 
   <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <a href="./" class="brand-logo">
+        <a href="../" class="brand-logo">
           <img class="logo-me" src="{% static '/store/img/logo-white.png' %}" alt="My image">
         </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li {% if nbar == 'home' %} class="active" {% endif %}><a href="./">Home</a></li>
-          <li {% if nbar == 'about' %} class="active" {% endif %}><a href="./about">About Us</a></li>
-          <li {% if nbar == 'clients' %} class="active" {% endif %}><a href="./clients">Clients</a></li>
-          <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">Products</a></li>
-          <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">Services</a></li>
-          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors">Vendors</a></li>
-          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors_create">Vendors create</a></li>
-          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">Contact</a></li>
+          <li {% if nbar == 'home' %} class="active" {% endif %}><a href="../">Home</a></li>
+          <li {% if nbar == 'about' %} class="active" {% endif %}><a href="../about">About Us</a></li>
+          <li {% if nbar == 'clients' %} class="active" {% endif %}><a href="../clients">Clients</a></li>
+          <li {% if nbar == 'products' %} class="active" {% endif %}><a href="../products">Products</a></li>
+          <li {% if nbar == 'services' %} class="active" {% endif %}><a href="../services">Services</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="../vendors">Vendors</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="../vendors_create">Vendors create</a></li>
+          <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="../contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li {% if nbar == 'home' %} class="active" {% endif %}><a href="./">Home</a></li>
-    <li {% if nbar == 'about' %} class="active" {% endif %}><a href="./about">About Us</a></li>
-    <li {% if nbar == 'products' %} class="active" {% endif %}><a href="./products">Products</a></li>
-    <li {% if nbar == 'services' %} class="active" {% endif %}><a href="./services">Services</a></li>
-    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors">Vendors</a></li>
-    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./vendors_create">Vendors create</a></li>
-    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="./contact">Contact</a></li>
+    <li {% if nbar == 'home' %} class="active" {% endif %}><a href="../">Home</a></li>
+    <li {% if nbar == 'about' %} class="active" {% endif %}><a href="../about">About Us</a></li>
+    <li {% if nbar == 'products' %} class="active" {% endif %}><a href="../products">Products</a></li>
+    <li {% if nbar == 'services' %} class="active" {% endif %}><a href="../services">Services</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="../vendors">Vendors</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="../vendors_create">Vendors create</a></li>
+    <li {% if nbar == 'contact' %} class="active" {% endif %}><a href="../contact">Contact</a></li>
   </ul>
 
 
