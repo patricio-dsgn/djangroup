@@ -26,14 +26,13 @@
 
     <div class="bar_log">
 
-      <div class="who">
+      {% comment %} <div class="who">
       {% if messages %}
         {% for message in messages %}
           {{ message }}
         {% endfor %}
       {% endif %}
-        
-      </div>
+      </div> {% endcomment %}
 
       {% if user.is_authenticated %}
       <div class="who">
@@ -46,7 +45,7 @@
       {% else %}
 
       <div class="log">
-        <a href="#">register</a>
+        <a href="{% url 'register_user' %}">register</a>
         <a href="{% url 'login' %}">login</a>
       </div>
         
