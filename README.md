@@ -1,6 +1,4 @@
-# Djangroup
-
-    Desarrollo correspondiente a ABPro 5
+# Djangroup _(ABPro 5)_
 
 Este Proyecto desarrolla:
 
