@@ -1,1 +1,1 @@
-web: gunicorn appoo.wsgi
+web: gunicorn appoo.wsgi --log-file--
