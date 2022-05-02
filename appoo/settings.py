@@ -155,3 +155,13 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+#configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
+
+
+
+
+
