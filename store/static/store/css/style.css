@@ -4,7 +4,7 @@
 .bar_log{
     position: relative;
     height: 20px;
-    z-index: 2000;
+    z-index: 1;
 }
 
 .bar_log .log{
@@ -27,7 +27,7 @@
 .who{
     position: fixed;
     color: #36dc83;
-    z-index: 2000;
+    z-index: 2;
     margin-left: 10px;
 }
 
