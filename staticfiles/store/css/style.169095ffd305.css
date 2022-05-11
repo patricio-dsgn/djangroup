@@ -1,0 +1,36 @@
+
+
+
+.bar_log{
+    position: relative;
+    height: 20px;
+    z-index: 1;
+}
+
+.bar_log .log{
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    background: rgb(71, 15, 120);
+    margin-bottom: 30px;
+}
+
+.bar_log .log a{
+    color: #0ff;
+    margin-right: 30px;
+}
+
+.bar_log .log a:hover{
+    filter: hue-rotate(80deg);
+}
+
+.who{
+    position: fixed;
+    color: #36dc83;
+    z-index: 2;
+    margin-left: 10px;
+}
+
+
+
+textarea.materialize-textarea{height: 6rem;}

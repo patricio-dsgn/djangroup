@@ -1,0 +1,1 @@
+web: gunicorn appoo.wsgi --log-file--

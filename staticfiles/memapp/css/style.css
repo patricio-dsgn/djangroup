@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&family=Work+Sans:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: absolute;
+    display: block;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    /* border: 20px solid #000; */
+}
+
+#my-animation{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 11px solid #00f; */
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* font-family: 'Work Sans', sans-serif; */
+    font-family: 'Mali', cursive;
+    color: #000000;
+    font-size: 0;
+
+}
+
+h1 span{
+    position: relative;
+    vertical-align: middle;
+    font-size: 50px;
+    color: #e5520e;
+}
+
+h1 img{
+    position: relative;
+    vertical-align: middle;
+    width: 120px;
+    font-size: 0;
+}
+
+.img-1{
+    position: relative;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
